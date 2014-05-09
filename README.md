@@ -22,7 +22,6 @@ $ brew install vim
 vim +PluginInstall +qall
 
 ~~~
-
 ## Usage 
 
 From within vim, easily open any url in your current line.
@@ -30,11 +29,11 @@ From within vim, easily open any url in your current line.
 ~~~ markdown
 # some-file.txt
 
-Go checkout https://github.com/jonmorehouse/vim-open
-
+* Go checkout [vimhub](https://github.com/jonmorehouse/vimhub)
+* https://github.com/jonmorehouse/vimhub
 ~~~
 
-~~~ vim 
+~~~ save
 :VimOpen
 ~~~
 
