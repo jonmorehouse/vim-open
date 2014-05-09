@@ -1,7 +1,7 @@
-"if exists("g:vim_open_loaded") || &cp
-  "finish
-"endif
-"let g:vim_open_loaded= 1
+if exists("g:vim_open_loaded") || &cp
+  finish
+endif
+let g:vim_open_loaded= 1
 
 python <<EOF
 import vim
