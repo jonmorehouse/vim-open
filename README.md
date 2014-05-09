@@ -35,7 +35,7 @@ Go checkout https://github.com/jonmorehouse/vim-open
 ~~~
 
 ~~~ vim 
-:Browse 
+:VimOpen
 ~~~
 
 
