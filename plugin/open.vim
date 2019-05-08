@@ -3,13 +3,13 @@ if exists("g:vim_open_loaded") || &cp
 endif
 let g:vim_open_loaded= 1
 
-python <<EOF
+python3 <<EOF
 import vim
 import webbrowser
 import re
 
 def markdown_url(line):
-  
+
   # Anything that isn't a square closing bracket
   name_regex = "[^]]+"
   # http:// or https:// followed by anything but a closing paren
@@ -19,18 +19,18 @@ def markdown_url(line):
   return [match[1] for match in re.findall(markup_regex, line)]
 
 def plaintext_url(line):
-  
+
   return re.findall(r'(https?://\S+)', line)
 
 def vim_open():
-  
+
   urls = markdown_url(vim.current.line)
   if not len(urls) > 0:
     urls = plaintext_url(vim.current.line)
-  
+
   if not len(urls) > 0:
     return
-  
+
   for url in urls:
     webbrowser.open(url)
 
